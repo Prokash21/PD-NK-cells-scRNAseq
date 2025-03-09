@@ -1,8 +1,3 @@
-# script to perform standard workflow steps to analyze single cell RNA-Seq data
-# data: 20k Mixture of NSCLC DTCs from 7 donors, 3' v3.1
-# data source: https://www.10xgenomics.com/resources/datasets/10-k-human-pbm-cs-multiome-v-1-0-chromium-controller-1-standard-2-0-0         
-
-# setwd("~/Desktop/demo/single_cell_RNASeq/scripts")
 
 #install.packages("hdf5r")
 library(hdf5r)
