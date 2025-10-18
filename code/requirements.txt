@@ -1,0 +1,17 @@
+Seurat
+tidyverse
+ggplot2
+patchwork
+viridis
+pheatmap
+EnhancedVolcano
+SingleR
+celldex
+monocle3
+clusterProfiler
+org.Hs.eg.db
+enrichplot
+msigdbr
+igraph
+plotly
+BiocManager
