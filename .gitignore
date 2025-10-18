@@ -1,0 +1,19 @@
+# Ignore data and output files
+*.csv
+*.jpg
+*.tif
+*.pdf
+*.rds
+*.RData
+
+# R and RStudio files
+.Rhistory
+.Rproj.user
+
+# Figures and intermediate results
+figure/
+trajectory_plots/
+
+# System files
+.DS_Store
+Thumbs.db
