@@ -1,0 +1,22 @@
+# Keep code and notebook files, but ignore large data artifacts
+*
+!*.ipynb
+!*.R
+!*.py
+!*.md
+!*.txt
+!*.json
+!*.yml
+!*.yaml
+!*.sh
+!figures/
+!figures/**
+!.gitignore
+
+# Large raw/generated data directories and files
+GSE141578_RAW_split/
+cache/
+model.model/
+*.h5ad
+*.h5
+*.loom
