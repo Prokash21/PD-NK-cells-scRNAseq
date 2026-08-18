@@ -20,3 +20,6 @@ model.model/
 *.h5ad
 *.h5
 *.loom
+
+
+*.DS_Store
