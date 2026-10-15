@@ -1,0 +1,6 @@
+gene,log2FC_NK_vs_all,pct_NK,pct_other_cells,adj_p,also_up_vs_CD8T,why_shortlisted (hypothesis from literature)
+TYROBP,5.40,95.0,10.7,3.4e-214,yes,DAP12 adaptor for NK activating receptors; the TREM2-TYROBP axis drives phagocytic clearance in microglia
+FCER1G,4.51,85.3,9.6,1.4e-169,yes,FcRgamma adaptor for Fc receptors; possible route for uptake of antibody-bound alpha-synuclein
+CD63,2.42,67.1,27.6,2.5e-77,yes,late endosome/lysosome tetraspanin; NK cells degrade internalised alpha-synuclein through the endolysosomal pathway
+CTSW,3.70,95.8,44.8,1.9e-230,yes,cathepsin W; lymphocyte-restricted protease and the top NK-enriched gene in CSF
+RHOC,1.59,46.4,22.3,1.1e-22,yes,Rho-family GTPase (same family as RAC1); cytoskeleton remodelling needed for migration and engulfment
