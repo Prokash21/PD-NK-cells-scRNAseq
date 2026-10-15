@@ -23,3 +23,7 @@ model.model/
 
 
 *.DS_Store
+
+# local only (curated copy in PD_CSF_NK/)
+figures/NK_*
+figures/dotplot__NK_markers.pdf

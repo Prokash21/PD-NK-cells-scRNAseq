@@ -17,3 +17,14 @@ trajectory_plots/
 # System files
 .DS_Store
 Thumbs.db
+
+# local work not meant for GitHub (curated version lives in PD_CSF_NK/)
+parkinson disease/Guan2022_replication/
+parkinson disease/Seurat_UC_LA/
+parkinson disease/scRNA-seq_scanpy/figures/NK_*
+parkinson disease/scRNA-seq_scanpy/figures/dotplot__NK_markers.pdf
+parkinson disease/seurat/.gitignore
+parkinson disease/seurat/README.md
+parkinson disease/seurat/cell_type_annotation.R
+parkinson disease/seurat/figures/
+parkinson disease/seurat/requirements.txt
