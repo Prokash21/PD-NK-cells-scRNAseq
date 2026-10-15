@@ -13,8 +13,8 @@ the NK cells found in patient CSF. They could then be measured cheaply by qRT-PC
 follow-up.
 
 ## Data and methods
-- **Data:** CSF 10x scRNA-seq from GEO GSE141578 (Gate et al., 2021). PD and healthy-control donors were kept, and Lewy body
-  dementia donors were excluded.
+- **Data:** CSF 10x scRNA-seq from GEO GSE141578 (Gate et al., 2021). Sixteen CSF samples were processed. PD vs control
+  comparisons use 6 PD and 9 healthy-control donors, with one Lewy body dementia donor left out.
 - **Pre-processing (scanpy):** per-sample doublet removal with scVI-SOLO; cells with < 200 genes, ≥ 20% mitochondrial reads or
   ≥ 55% ribosomal reads were removed; genes present in < 10 cells were dropped.
 - **Integration and clustering:** scVI (batch = donor) on 2,000 highly variable genes, then a UMAP and Leiden graph built on
@@ -32,9 +32,10 @@ follow-up.
    and *GNLY* (Fig. 1).
 2. **Two NK states.** One is a SELL⁺IL7R⁺TCF7⁺ state (74%, CD56^bright-like). The other is a CCL5⁺GZMA/H/M⁺PRF1⁺ cytotoxic
    effector state (26%) (Fig. 2).
+   Every donor's CSF is dominated by CD4⁺ and CD8⁺ T cells, with NK cells a small but consistent fraction (Fig. 4a).
 3. **Function.** GO enrichment is led by NK-mediated cytotoxicity, NK activation, interferon response and antiviral
    defence (Fig. 3a).
-4. **Candidate genes for follow-up** (`results/candidate_genes.csv`):
+4. **Candidate genes for follow-up** (`results/candidate_genes.csv`, Fig. 4b):
 
 | Gene | log2FC | % NK | % other | Rationale (literature) |
 |---|---|---|---|---|

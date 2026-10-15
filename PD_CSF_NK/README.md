@@ -11,7 +11,8 @@ PD patients.
 
 ## Data
 Public 10x Genomics CSF scRNA-seq, GEO [GSE141578](https://www.ncbi.nlm.nih.gov/geo/query/acc.cgi?acc=GSE141578)
-(Gate et al., *Science* 2021). PD and healthy-control (HC) donors were used, and Lewy body dementia donors were excluded.
+(Gate et al., *Science* 2021). Sixteen CSF samples were processed (19,265 cells). The PD vs healthy-control (HC) comparisons
+use 6 PD and 9 HC donors; one Lewy body dementia donor was left out of those comparisons.
 
 ## What I did
 1. QC, doublet and low-quality cell removal, scVI integration across donors, Leiden clustering, marker-based annotation
@@ -19,7 +20,8 @@ Public 10x Genomics CSF scRNA-seq, GEO [GSE141578](https://www.ncbi.nlm.nih.gov/
 2. Picked out the NK cells, found the genes enriched in them (against all other cells and against CD8⁺ T cells, the closest
    neighbouring population), then sub-clustered NK states and ran GO enrichment
    → `code/02_nk_target_genes.py`, `code/03_nk_figures.py`
-3. Short-listed candidate genes for qRT-PCR → `results/candidate_genes.csv`
+3. Short-listed candidate genes for qRT-PCR and plotted cell-type composition per donor
+   → `results/candidate_genes.csv`, `code/04_overview_figure.py`
 
 ## Results
 
@@ -47,6 +49,11 @@ cells, higher than in CD8⁺ T cells) and has a plausible link to uptake, migrat
 | *CTSW* | 96% vs 45% | lymphocyte-restricted cathepsin and the top NK gene in CSF |
 | *RHOC* | 46% vs 22% | Rho-family GTPase (RAC1 family) involved in migration and engulfment |
 
+![Composition and candidate genes](figures/Fig4_composition_candidates.png)
+
+*(a) CSF is dominated by CD4⁺ and CD8⁺ T cells in every donor, and NK cells are a small but consistent fraction.
+(b) The candidates (bold) are expressed in most NK cells and in far fewer other CSF cells.*
+
 The links to α-synuclein come from the literature and are hypotheses. They have not been tested here.
 
 ## Limitations
@@ -62,14 +69,14 @@ Sample access was agreed, but funding was not secured.
 
 ## Repository
 ```
-code/       01 notebook (QC → scVI → annotation), 02 NK genes, 03 figures
+code/       01 notebook (QC → scVI → annotation), 02 NK genes, 03 NK figures, 04 overview figure
 figures/    PNG + PDF
-results/    candidate_genes.csv, NK marker tables, GO enrichment, NK states
+results/    candidate_genes.csv, NK marker tables, GO enrichment, NK states, composition
 report/     short written report
 proposal/   validation proposal (qRT-PCR, NINS)
 ```
 To run: `pip install -r requirements.txt`, download GSE141578, run the notebook (edit the input path in it), and move the
-`combined.h5ad` and `integrated.h5ad` files it writes into `data/`. Then run `python code/02_nk_target_genes.py` and `python code/03_nk_figures.py`.
+`combined.h5ad` and `integrated.h5ad` files it writes into `data/`. Then run `python code/02_nk_target_genes.py`, `python code/03_nk_figures.py` and `python code/04_overview_figure.py`.
 
 ## References
 - Earls RH et al. NK cells clear α-synuclein and the depletion of NK cells exacerbates synuclein pathology in a mouse model of α-synucleinopathy. *PNAS* 2020.
