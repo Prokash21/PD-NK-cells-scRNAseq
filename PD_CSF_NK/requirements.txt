@@ -1,0 +1,16 @@
+scanpy>=1.9
+anndata>=0.8
+scvi-tools
+numpy
+scipy
+pandas
+statsmodels
+matplotlib
+seaborn
+adjustText
+scikit-learn
+scikit-misc
+python-igraph
+leidenalg
+gseapy
+pydeseq2

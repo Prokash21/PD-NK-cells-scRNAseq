@@ -1,0 +1,10 @@
+# the repo-level .gitignore drops *.csv and *.pdf; keep them here
+!*.csv
+!*.pdf
+
+# large inputs, regenerate with code/01_qc_integration_annotation.ipynb
+data/
+*.h5ad
+__pycache__/
+.ipynb_checkpoints/
+~$*
